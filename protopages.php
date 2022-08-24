@@ -193,7 +193,7 @@ class ProtoSite {
 						if ($this->localExportDir && mb_strpos(realpath($dir.$obj), $this->scriptDir) === false) {
 							die('FILE TO DELETE must be in the SCRIPT DIR');
 						}
-						//unlink($dir.$obj);
+						unlink($dir.$obj);
 					}
 				}
 			}
@@ -206,7 +206,7 @@ class ProtoSite {
 			if ($this->localExportDir && mb_strpos(realpath($dir), $this->scriptDir) === false) {
 				die('DIR TO DELETE must be in the SCRIPT DIR');
 			}
-			//rmdir($dir); 
+			rmdir($dir); 
 		}
 	}
 	
